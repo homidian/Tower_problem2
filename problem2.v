@@ -15,8 +15,7 @@ module problem2(
     OutBus_Data
     );
 
-    localparam START=0, S0=1, S1=2,
-               S2=3, S3=4, S4=5;
+    localparam START=0, S0=1, S1=2, S2=3;
     reg [2:0] state,    // Current state
               nextState; // Next state
 
@@ -381,11 +380,8 @@ module problem2(
             nextState = S1;
             in_fifo_rd_en = 8'h00;
         end
-
         endcase
-
     end
-
 
 endmodule
 
